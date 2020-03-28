@@ -20,7 +20,7 @@ public class CollectionUseCase {
         this.collectionFetcher = collectionFetcher;
     }
 
-    public void refreshFeedList() {
+    public void refreshCollections() {
         List<Collection> myCollections = collectionFetcher.fetchAll();
         collectionRepository.deleteAll(myCollections);
         collectionRepository.saveAll(myCollections);

@@ -27,7 +27,7 @@ public class App {
 
     @Bean
     public CommandLineRunner demo() {
-        return (args) -> this.collectionUseCase.refreshFeedList();
+        return (args) -> this.collectionUseCase.refreshCollections();
     }
 
 }
