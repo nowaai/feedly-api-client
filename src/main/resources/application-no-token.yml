@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/crawling"
+    username: postgres
+    password: postgres
+  hibernate:
+    dialect: org.hibernate.dialect.PostgreSQL81Dialect
+    show-sql: true
+    hbm2ddl:
+      auto: update
+feedly:
+  auth:
+    access_token: ""
+  endpoint:
+    collections: "https://cloud.feedly.com/v3/collections"
+    subscriptions: "https://cloud.feedly.com/v3/subscriptions"
+    streams:
+      contents: "https://cloud.feedly.com/v3/streams/contents"
+
