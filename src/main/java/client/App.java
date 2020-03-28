@@ -3,7 +3,7 @@
  */
 package client;
 
-import client.usecase.FeedUseCase;
+import client.usecase.CollectionUseCase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class App {
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
     @Autowired
-    private FeedUseCase feedUseCase;
+    private CollectionUseCase collectionUseCase;
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
@@ -27,7 +27,7 @@ public class App {
 
     @Bean
     public CommandLineRunner demo() {
-        return (args) -> this.feedUseCase.refreshFeedList();
+        return (args) -> this.collectionUseCase.refreshFeedList();
     }
 
 }

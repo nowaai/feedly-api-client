@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 @Component
-public class FeedUseCase {
+public class CollectionUseCase {
 
     private CollectionRepository collectionRepository;
     private CollectionFetcher collectionFetcher;
 
     @Autowired
-    public FeedUseCase(CollectionRepository collectionRepository, CollectionFetcher collectionFetcher) {
+    public CollectionUseCase(CollectionRepository collectionRepository, CollectionFetcher collectionFetcher) {
         this.collectionRepository = collectionRepository;
         this.collectionFetcher = collectionFetcher;
     }
